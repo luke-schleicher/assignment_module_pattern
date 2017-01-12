@@ -5,7 +5,7 @@ GAME.Model = (function(){
   var _playerScore = 0;
 
   var _updatePlayerScore = function() {
-    _playerScore++
+    _playerScore++;
   };
 
   var getPlayerScore = function() {
@@ -17,7 +17,7 @@ GAME.Model = (function(){
   };
 
   var getMole = function() {
-    return Math.floor(Math.random() * 8) + 1
+    return Math.floor(Math.random() * 8) + 1;
   };
 
   return {

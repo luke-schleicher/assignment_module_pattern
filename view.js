@@ -7,9 +7,9 @@ GAME.View = (function($){
   var _$scoreBoard = $("#score");
 
   var _setSquareListeners = function(squareClicked) {
-    _$litSquare.on("click", function(e) {
+    $("body").on("click", _$litSquare, function(e) {
       squareClicked(e.target.id);
-    })
+    });
   };
 
   var init = function(squareClicked) {
@@ -21,14 +21,15 @@ GAME.View = (function($){
     _$scoreBoard.text(score);
   };
 
-  var displayMole = function() {
-
+  var toggleMole = function(id) {
+    var $square = $("#" + id);
+    $square.toggleClass('lit');
   };
 
   return {
     init: init,
     renderPlayerScore: renderPlayerScore,
-    displayMole: displayMole
+    toggleMole: toggleMole
   }
 
 
