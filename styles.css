@@ -1,0 +1,18 @@
+.square {
+  border: 1px solid #000;
+  width: 100px;
+  height: 100px;
+  display: inline-block;
+}
+.lit {
+  background-color: #2ecc71;
+}
+#score {
+  width: 100px;
+  height: 50px;
+  display: inline-block;
+  font-size: 32px;
+}
+span {
+  font-size: 32px;
+}

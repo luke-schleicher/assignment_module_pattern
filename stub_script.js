@@ -2,35 +2,31 @@ var Module = (function() {
 
   var _privateVar = 10;
   var publicVar = "I'm a public variable";
+  var stub = {};
 
   var _privateFunc = function() {
     console.log(_privateVar);
   };
 
-  var anotherPublicFunc = function() {
+  stub.anotherPublicFunc = function() {
     console.log("I'm a public function");
   };
 
-  var publicFunc = function() {
+  stub.publicFunc = function() {
     anotherPublicFunc();
     _privateFunc();
   };
 
-  var setPublicVar = function(val) {
+  stub.setPublicVar = function(val) {
     publicVar = val;
   };
 
-  var getPublicVar = function() {
+  stub.getPublicVar = function() {
     return publicVar;
   };
 
   console.log('run');
- 
-  return {
-    setPublicVar: setPublicVar,
-    getPublicVar: getPublicVar,
-    publicFunc: publicFunc,
-    anotherPublicFunc: anotherPublicFunc
-  }
+
+  return stub;
 
 })();
