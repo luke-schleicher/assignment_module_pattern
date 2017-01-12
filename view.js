@@ -2,12 +2,10 @@ var GAME = GAME || {};
 
 GAME.View = (function($){
 
-  var _$litSquare = $(".lit");
-
   var _$scoreBoard = $("#score");
 
   var _setSquareListeners = function(squareClicked) {
-    $("body").on("click", _$litSquare, function(e) {
+    $("body").on("click", ".lit", function(e) {
       squareClicked(e.target.id);
     });
   };
